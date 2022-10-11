@@ -41,16 +41,6 @@ export default function App() {
     setContacts(contacts.filter(contact => contact.id !== id));
   };
 
-  // useEffect(() => {
-  //   if (localStorage.getItem('contacts') !== null) {
-  //     const contactsLocal = localStorage.getItem('contacts');
-
-  //     const parsContacts = JSON.parse(contactsLocal);
-
-  //     setContacts(parsContacts);
-  //   }
-  // }, []);
-
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
