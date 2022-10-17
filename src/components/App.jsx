@@ -5,8 +5,7 @@ import { Contacts } from './Contacts/Contacts';
 import { Filter } from './Filter/Filter';
 
 export default function App() {
-  const contactsLocal = localStorage.getItem('contacts');
-  const parsContacts = JSON.parse(contactsLocal);
+  const parsContacts = JSON.parse(localStorage.getItem('contacts'));
 
   const [contacts, setContacts] = useState(
     parsContacts ?? [
