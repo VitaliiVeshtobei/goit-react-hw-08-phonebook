@@ -1,28 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { deleteContact } from '../../redux/contactsSlice';
-import { getContacts, getFilter } from '../../redux/selectors';
+import { fetchContacts } from '../../redux/operations';
+import { deleteContact } from '../../redux/operations';
+import { selectContacts, selectVisibleContacts } from '../../redux/selectors';
 
 import { ButtonContact, ListContatcts, ItemContact } from './ContactsStyled';
 
 export function Contacts() {
-  const contacts = useSelector(getContacts);
-  const filter = useSelector(getFilter);
-
-  const normalizedFilter = filter.toLowerCase();
-  const visibleContacts = contacts.filter(contact => {
-    return contact.name.toLowerCase().includes(normalizedFilter);
-  });
-
   const dispatch = useDispatch();
+  const { isLoading, error } = useSelector(selectContacts);
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
+  const visibleContacts = useSelector(selectVisibleContacts);
 
   return (
     <ListContatcts>
+      {isLoading && <p>Loading tasks...</p>}
+      {error && <p>{error}</p>}
       {visibleContacts.map(contact => {
         return (
           <ItemContact key={contact.id}>
-            {contact.name}: {contact.number}
+            {contact.name}: {contact.phone}
             <ButtonContact
               type="button"
               onClick={() => dispatch(deleteContact(contact.id))}
