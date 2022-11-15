@@ -5,6 +5,7 @@ export const ButtonContact = styled.button`
   &:hover,
   &:focus {
     background-color: red;
+  }
 `;
 
 export const ListContatcts = styled.ul`

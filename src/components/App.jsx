@@ -1,24 +1,19 @@
-import { useSelector } from 'react-redux';
-
-import { selectError, selectIsLoading } from 'redux/selectors';
-
-import { Form } from './Form/Form';
-import { Contacts } from './Contacts/Contacts';
-import { Filter } from './Filter/Filter';
+import { Routes, Route } from 'react-router-dom';
+import { Home } from '../pages/Home/Home';
+import { Contacts } from '../pages/Contacts';
+import { Login } from 'pages/Login';
+import { Register } from '../pages/Register';
+import { Layout } from './Layout';
 
 export default function App() {
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
   return (
-    <div>
-      <h1>Phonebook</h1>
-      <Form />
-      <div>
-        <h2>Contacts</h2>
-        <Filter />
-        {isLoading && !error && <b>Request in progress...</b>}
-        <Contacts />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="contacts" element={<Contacts />} />
+      </Route>
+    </Routes>
   );
 }

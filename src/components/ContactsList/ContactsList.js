@@ -7,7 +7,7 @@ import { selectContacts, selectVisibleContacts } from '../../redux/selectors';
 
 import { ButtonContact, ListContatcts, ItemContact } from './ContactsStyled';
 
-export function Contacts() {
+export function ContactsList() {
   const dispatch = useDispatch();
   const { isLoading, error } = useSelector(selectContacts);
 
