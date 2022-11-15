@@ -27,7 +27,7 @@ export function ContactsList() {
       {visibleContacts.map(contact => {
         return (
           <ItemContact key={contact.id}>
-            {contact.name}: {contact.phone}
+            {contact.name}: {contact.number}
             <ButtonContact
               type="button"
               onClick={() => dispatch(deleteContact(contact.id))}

@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+
 import { selectError, selectIsLoading } from 'redux/contacts/selectors';
 
 import { Form } from '../components/Form/Form';
@@ -21,3 +22,5 @@ export const Contacts = () => {
     </div>
   );
 };
+
+export default Contacts;

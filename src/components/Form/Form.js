@@ -10,9 +10,9 @@ export function Form() {
     evt.preventDefault();
     const form = evt.target;
     const name = evt.target.elements.name.value;
-    const phone = evt.target.elements.phone.value;
+    const number = evt.target.elements.number.value;
 
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
     form.reset();
   };
 
@@ -33,7 +33,7 @@ export function Form() {
           Number
           <Input
             type="tel"
-            name="phone"
+            name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required

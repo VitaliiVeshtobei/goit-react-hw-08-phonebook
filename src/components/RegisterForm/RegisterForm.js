@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+
 import { register } from 'redux/auth/operations';
 
 import { Form, Label } from './RegisterFormStyled';
@@ -8,7 +9,6 @@ export const RegisterForm = () => {
   const handleSubmit = evt => {
     evt.preventDefault();
     const form = evt.currentTarget;
-    console.dir(form);
     dispatch(
       register({
         name: form.elements.name.value,
