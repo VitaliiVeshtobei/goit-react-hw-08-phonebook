@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { fetchContacts } from '../../redux/operations';
-import { deleteContact } from '../../redux/operations';
-import { selectContacts, selectVisibleContacts } from '../../redux/selectors';
+import { fetchContacts } from '../../redux/contacts/operations';
+import { deleteContact } from '../../redux/contacts/operations';
+import {
+  selectContacts,
+  selectVisibleContacts,
+} from '../../redux/contacts/selectors';
 
 import { ButtonContact, ListContatcts, ItemContact } from './ContactsStyled';
 

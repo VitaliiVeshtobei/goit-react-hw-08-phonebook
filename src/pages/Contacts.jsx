@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectError, selectIsLoading } from 'redux/selectors';
+import { selectError, selectIsLoading } from 'redux/contacts/selectors';
 
 import { Form } from '../components/Form/Form';
 import { ContactsList } from '../components/ContactsList/ContactsList';
