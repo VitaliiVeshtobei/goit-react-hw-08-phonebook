@@ -1,5 +1,6 @@
-import styled, { keyframes } from 'styled-components';
 import { bounceInDown } from 'react-animations';
+
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;

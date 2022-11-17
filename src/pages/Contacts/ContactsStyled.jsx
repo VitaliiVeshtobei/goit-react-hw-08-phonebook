@@ -1,5 +1,6 @@
-import styled, { keyframes } from 'styled-components';
 import { fadeIn, bounceInDown } from 'react-animations';
+
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   animation: 5s ${keyframes`${fadeIn}`};

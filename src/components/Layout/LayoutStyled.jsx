@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import img from '../../image/pexels-alex-andrews-821754.jpg';
+
+import styled from 'styled-components';
 
 export const LayoutContainer = styled.div`
   background-image: linear-gradient(
@@ -14,11 +15,4 @@ export const LayoutContainer = styled.div`
   height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
-
-  /* width: auto;
-  max-width: 1600px; */
-  /* height: 600px; */
-  /* min-height: calc(100vh - 1px); */
-
-  /* min-height: calc(100vh); */
 `;

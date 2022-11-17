@@ -1,5 +1,6 @@
-import styled, { keyframes } from 'styled-components';
 import { fadeInLeft } from 'react-animations';
+
+import styled, { keyframes } from 'styled-components';
 
 export const ButtonContact = styled.button`
   margin-left: 10px;

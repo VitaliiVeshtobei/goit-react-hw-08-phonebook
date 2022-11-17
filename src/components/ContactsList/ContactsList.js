@@ -12,7 +12,6 @@ import {
   ButtonContact,
   ListContatcts,
   ItemContact,
-  FadeInLeft,
 } from './ContactsListStyled';
 
 export function ContactsList() {

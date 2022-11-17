@@ -1,6 +1,8 @@
-import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
+
 import { pulse } from 'react-animations';
+
+import styled, { keyframes } from 'styled-components';
 
 export const NavItem = styled(NavLink)`
   animation: 1s infinite ${keyframes`${pulse}`};
