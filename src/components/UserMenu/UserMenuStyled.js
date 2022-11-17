@@ -8,3 +8,10 @@ export const Wrapper = styled.div`
 export const Username = styled.p`
   font-weight: 700;
 `;
+
+export const Button = styled.button`
+  &:hover,
+  &:focus {
+    color: ${({ theme: { colors } }) => colors.activeLink};
+  }
+`;

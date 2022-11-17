@@ -3,7 +3,7 @@ import { Container, Title } from './HomeStyled';
 export const Home = () => {
   return (
     <Container>
-      <Title>Phone book welcome page</Title>
+      <Title>Welcome to the Phone Book</Title>
     </Container>
   );
 };

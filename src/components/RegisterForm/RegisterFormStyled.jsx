@@ -9,3 +9,10 @@ export const Label = styled.label`
   flex-direction: column;
   margin-bottom: 16px;
 `;
+
+export const Button = styled.button`
+  &:hover,
+  &:focus {
+    color: ${({ theme: { colors } }) => colors.activeLink};
+  }
+`;
