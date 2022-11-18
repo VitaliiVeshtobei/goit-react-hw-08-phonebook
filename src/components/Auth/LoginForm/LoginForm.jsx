@@ -6,7 +6,7 @@ import { logIn } from 'redux/auth/operations';
 
 import { useAuth } from 'hooks';
 
-import { Form, Label } from './LoginFormStyled';
+import { Form, Label, ErrorText } from './LoginFormStyled';
 
 export const LoginForm = () => {
   const { error } = useAuth();
@@ -34,14 +34,14 @@ export const LoginForm = () => {
               /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
           })}
         />
-        <div style={{ color: 'red' }}>
+        <ErrorText>
           {errors?.email && (
             <p>
               {errors?.email.message ||
                 'Please enter a valid email e.g. "test@mail.com"'}
             </p>
           )}
-        </div>
+        </ErrorText>
       </Label>
       <Label>
         Password
@@ -54,9 +54,9 @@ export const LoginForm = () => {
             pattern: /[A-Za-z]/,
           })}
         />
-        <div style={{ color: 'red' }}>
+        <ErrorText>
           {errors?.password && <p>{errors?.password.message || 'Error'}</p>}
-        </div>
+        </ErrorText>
       </Label>
       <button disabled={!isValid} type="submit">
         Log In

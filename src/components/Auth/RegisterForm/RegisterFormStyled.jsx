@@ -16,3 +16,8 @@ export const Button = styled.button`
     color: ${({ theme: { colors } }) => colors.activeLink};
   }
 `;
+
+export const ErrorText = styled.div`
+  margin-top: 5px;
+  color: red;
+`;

@@ -29,8 +29,7 @@ const authSlice = createSlice({
       state.isLoggedIn = true;
       state.error = false;
     },
-    [logIn.rejected](state, action) {
-      console.log(action);
+    [logIn.rejected](state) {
       state.error = true;
     },
     [logOut.fulfilled](state) {

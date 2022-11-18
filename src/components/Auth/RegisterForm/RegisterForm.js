@@ -6,7 +6,7 @@ import { registerForm } from 'redux/auth/operations';
 
 import { useAuth } from 'hooks';
 
-import { Form, Label, Button } from './RegisterFormStyled';
+import { Form, Label, Button, ErrorText } from './RegisterFormStyled';
 
 export const RegisterForm = () => {
   const { error } = useAuth();
@@ -42,9 +42,9 @@ export const RegisterForm = () => {
             },
           })}
         />
-        <div style={{ color: 'red' }}>
+        <ErrorText>
           {errors?.name && <p>{errors?.name.message || 'Error'}</p>}
-        </div>
+        </ErrorText>
       </Label>
       <Label>
         Email
@@ -55,14 +55,14 @@ export const RegisterForm = () => {
               /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
           })}
         />
-        <div style={{ color: 'red' }}>
+        <ErrorText>
           {errors?.email && (
             <p>
               {errors?.email.message ||
                 'Please enter a valid email e.g. "test@mail.com"'}
             </p>
           )}
-        </div>
+        </ErrorText>
       </Label>
       <Label>
         Password
@@ -75,9 +75,9 @@ export const RegisterForm = () => {
             pattern: /[A-Za-z]/,
           })}
         />
-        <div style={{ color: 'red' }}>
+        <ErrorText>
           {errors?.password && <p>{errors?.password.message || 'Error'}</p>}
-        </div>
+        </ErrorText>
       </Label>
       <Button disabled={!isValid} type="submit">
         Register
