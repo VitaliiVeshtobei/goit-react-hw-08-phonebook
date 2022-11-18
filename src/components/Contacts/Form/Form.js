@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contacts/operations';
+import { addContact } from '../../../redux/contacts/operations';
 
 import { Input, Button, Label } from './FormStyled';
 

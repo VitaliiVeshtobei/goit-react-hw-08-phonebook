@@ -8,16 +8,13 @@ import { Wrapper, Username, Button } from './UserMenuStyled';
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
+  const onClick = () => {
+    dispatch(logOut());
+  };
   return (
     <Wrapper>
       <Username>{user.email}</Username>
-      <Button
-        onClick={() => {
-          dispatch(logOut());
-        }}
-      >
-        Logout
-      </Button>
+      <Button onClick={onClick}>Logout</Button>
     </Wrapper>
   );
 };

@@ -2,9 +2,9 @@ import { useSelector } from 'react-redux';
 
 import { selectError, selectIsLoading } from 'redux/contacts/selectors';
 
-import { Form } from '../../components/Form/Form';
-import { ContactsList } from '../../components/ContactsList/ContactsList';
-import { Filter } from '../../components/Filter/Filter';
+import { Form } from '../../components/Contacts/Form/Form';
+import { ContactsList } from '../../components/Contacts/ContactsList/ContactsList';
+import { Filter } from '../../components/Contacts/Filter/Filter';
 
 import {
   Container,

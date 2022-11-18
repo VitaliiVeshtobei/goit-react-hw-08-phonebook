@@ -1,4 +1,4 @@
-import img from '../../image/pexels-alex-andrews-821754.jpg';
+import img from '../../../image/pexels-alex-andrews-821754.jpg';
 
 import styled from 'styled-components';
 
