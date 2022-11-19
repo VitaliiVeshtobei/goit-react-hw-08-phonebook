@@ -28,6 +28,7 @@ export const RegisterForm = () => {
       <Label>
         Username
         <input
+          type="text"
           {...register('name', {
             required: 'Field is required',
             pattern: {
@@ -49,6 +50,7 @@ export const RegisterForm = () => {
       <Label>
         Email
         <input
+          type="email"
           {...register('email', {
             required: 'Field is required',
             pattern:
@@ -67,6 +69,7 @@ export const RegisterForm = () => {
       <Label>
         Password
         <input
+          type="password"
           {...register('password', {
             minLength: {
               value: 7,
